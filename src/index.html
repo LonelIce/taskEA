@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Timer</title>
+</head>
+<body>
+<img src="./assets/figureOnTheLeft.svg" alt="figureOnTheLeft" class="figureOnTheLeft">
+<img src="./assets/figureOnTheRight.svg" alt="figureOnTheRight" class="figureOnTheRight">
+<header>
+    <a href="/">
+        <img src="./assets/logo.svg" alt="logo" class="logo">
+    </a>
+</header>
+<main>
+    <span class="titleSit">under construction</span>
+    <span class="statement">We're making lots of improvements and will be back soon</span>
+    <div class="timerItems">
+        <div class="timerItem">
+            <span class="timerItem timerCount" id="timerDays">00</span>
+            <div class="timelineName">
+                <span class="mbText">dd</span>
+                <span class="dxText">Days</span>
+            </div>
+        </div>
+        <span class="timerItem separator">:</span>
+        <div class="timerItem">
+            <span class="timerItem timerCount" id="timerHours" 0>00</span>
+            <div class="timelineName">
+                <span class="mbText">hh</span>
+                <span class="dxText">Hours</span>
+            </div>
+        </div>
+        <span class="timerItem separator">:</span>
+        <div class="timerItem">
+            <span class="timerItem timerCount" id="timerMinutes">00</span>
+            <div class="timelineName">
+                <span class="mbText">mm</span>
+                <span class="dxText">Minutes</span>
+            </div>
+        </div>
+        <span class="timerItem separator">:</span>
+        <div class="timerItem">
+            <span class="timerItem timerCount" id="timerSeconds">00</span>
+            <div class="timelineName">
+                <span class="mbText">ss</span>
+                <span class="dxText">Seconds</span>
+            </div>
+        </div>
+    </div>
+    <span class="textInvitationEventPage">Check our event page when you wait:</span>
+    <a href="https://github.com/LonelIce" class="buttonInvitationEventPage">
+        <span class="descriptionButtonInvitationEventPage">Go to the event</span>
+        <img src="./assets/arrowRight.svg" alt="arrowRight" class="arrowRight">
+    </a>
+</main>
+<footer>
+    <form method="post" action="" id="folForm">
+        <div class="sendGroup">
+            <input type="email" class="email" placeholder="Enter your Email and get notified" required minlength="8"
+                   pattern="^\S+@\S+\.\S+$"/>
+            <input type="submit" class="submitButton" value="">
+        </div>
+    </form>
+</footer>
+<div class="popupContainer none" id="popupContainer">
+    <div class="popup">
+        <div class="exit timeExit">
+            <img src="./assets/exit.svg" alt="exit">
+        </div>
+        <span class="titlePopup">SUCCESS!</span>
+        <span class="descriptionPopup">You have successfully subscribed to the email newsletter</span>
+        <div class="closeButton timeExit">Close</div>
+    </div>
+</div>
+</body>
+</html>
