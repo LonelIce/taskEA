@@ -16,7 +16,8 @@ body {
 
   @keyframes appearanceFigureLeft {
     from {
-      top: -100px;
+      top: -150px;
+      left: -150px;
     }
     to {
       top: 0;
@@ -28,14 +29,17 @@ body {
     animation-name: appearanceFigureLeft;
     animation-duration: 2s;
     width: 35%;
+    left: 0;
   }
 
   @keyframes appearanceFigureRight {
     from {
-      top: -100px;
+      top: -150px;
+      right: -100px;
     }
     to {
       top: 0;
+      right: 0;
     }
   }
 
