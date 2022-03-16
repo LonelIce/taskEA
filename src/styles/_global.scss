@@ -312,12 +312,17 @@ body {
     }
 
     main {
-      .statement {
-        padding-top: 20px;
+      .titleSit {
+        padding-top: 160px;
+        padding-bottom: 20px;
       }
 
       .textInvitationEventPage {
         text-align: center;
+      }
+
+      .timerItems {
+        max-width: 358px;
       }
     }
 
