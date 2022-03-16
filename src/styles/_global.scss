@@ -348,28 +348,33 @@ body {
 
     header {
       padding-top: 60px;
-      padding-bottom: 20px;
     }
 
     main {
       .titleSit {
-        font-size: 75px;
+        font-size: 72px;
         line-height: 104%;
+        padding-top: 89px;
+        padding-bottom: 4px;
       }
 
       .statement {
-        padding-top: 16px;
         max-width: 423px;
         font-size: 18px;
       }
 
       .timerItems {
-        max-width: 30%;
-        padding-top: 32px;
-        padding-bottom: 72px;
+        max-width: 588px;
+        margin-top: 31px;
+        margin-bottom: 73px;
+        height: 129px;
 
         .timerItem {
           font-size: 72px;
+
+          .timerCount {
+            max-height: 72px;
+          }
 
           .timelineName {
             background-image: url("../assets/timerValueFigureDxt.svg");
@@ -397,6 +402,25 @@ body {
 
     footer {
       height: 192px;
+
+      form {
+        max-width: 440px;
+
+        .sendGroup {
+          padding: 8px;
+          margin-bottom: 8px;
+
+          .email {
+            font-size: 18px;
+            line-height: 150%;
+          }
+
+          .submitButton {
+            width: 43px;
+            height: 43px;
+          }
+        }
+      }
     }
   }
 }
