@@ -51,11 +51,12 @@ body {
       font-size: 36px;
       font-weight: 700;
       text-align: center;
-      line-height: 104%;
+      line-height: 100%;
+      padding-bottom: 18px;
+      padding-top: 60px;
     }
 
     .statement {
-      padding-top: 16px;
       line-height: 150%;
       max-width: 286px;
       font-weight: 400;
@@ -67,8 +68,9 @@ body {
       display: flex;
       justify-content: center;
       width: 100%;
-      max-width: 360px;
-      padding: 40px 0;
+      max-width: 310px;
+      height: 82px;
+      margin: 40px 0;
 
       .timerItem {
         font-weight: 600;
@@ -77,11 +79,18 @@ body {
         color: #162C4E;
         text-align: center;
 
+        .timerCount{
+          max-height: 36px;
+          display: block;
+        }
+
+
         .timelineName {
           display: flex;
           justify-content: center;
           align-items: center;
           background-image: url("../assets/timerValueFigure.svg");
+          margin-top: 6px;
           width: 64px;
           height: 40px;
           text-transform: uppercase;
@@ -89,7 +98,6 @@ body {
           font-size: 12px;
           line-height: 12px;
           color: #FFFFFF;
-          margin-top: 6px;
 
           .dxText {
             display: none;
@@ -105,10 +113,10 @@ body {
     .textInvitationEventPage {
       font-weight: 400;
       font-size: 16px;
-      padding-bottom: 15px;
       width: 100%;
       max-width: 360px;
       text-align: right;
+      padding-bottom: 15px;
     }
 
     @keyframes hoverButton {
@@ -129,7 +137,6 @@ body {
       align-items: center;
       min-width: 240px;
       padding: 16px 20px 16px 28px;
-      margin-bottom: 16px;
       border: 0;
       background-color: #1D4169;
       border-radius: 40px;
