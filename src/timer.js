@@ -1,3 +1,4 @@
+/*
 const dayTimer = document.getElementById('timerDays')
 const hoursTimer = document.getElementById('timerHours')
 const minutesTimer = document.getElementById('timerMinutes')
@@ -29,3 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     timerId = setInterval(countdownTimer, 1000);
 });
+*/
