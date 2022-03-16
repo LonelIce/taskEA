@@ -11,18 +11,19 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  overflow: auto;
 
   .figureOnTheLeft {
     position: absolute;
-    width: 35%;
-    left: 0;
-  }
+    width: 50%;
+    left: -15px;
+    top:-15px
+      }
 
   .figureOnTheRight {
     position: absolute;
     right: 0;
-    width: 35%;
+    top: -18px;
+    width: 50%;
   }
 
   header {
