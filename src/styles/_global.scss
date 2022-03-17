@@ -39,7 +39,7 @@ body {
   }
 
   main {
-    padding:20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,6 +49,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .titleSit {
         text-transform: uppercase;
         opacity: 39%;
@@ -310,17 +311,22 @@ body {
     }
 
     main {
-      .titleSit {
-        padding-top: 160px;
-        padding-bottom: 20px;
-      }
+      .containerMain {
+        .titleSit {
+          padding-bottom: 16px;
+        }
 
-      .textInvitationEventPage {
-        text-align: center;
-      }
+        .textInvitationEventPage {
+          text-align: center;
+        }
 
-      .timerItems {
-        max-width: 358px;
+        .timerItems {
+          max-width: 360px;
+        }
+
+        .buttonInvitationEventPage{
+          margin:0;
+        }
       }
     }
 
