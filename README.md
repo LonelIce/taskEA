@@ -14,5 +14,6 @@
 * Webpack 5  
 ### Pixel Perfect:
 ![Mobile](imgForReadme/mobilePP.png "Mobile")  
-![Mobile](imgForReadme/smallDeskPP.png "Small desktop")  
-![Mobile](imgForReadme/deskPP.png "Desktop")  
+![Small desktop](imgForReadme/smallDeskPP.png "Small desktop")  
+![Desktop](imgForReadme/deskPP.png "Desktop")  
+![Popup](imgForReadme/popup.png "Popup")  
