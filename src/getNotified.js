@@ -9,7 +9,7 @@ const POPUP_CONST = {
     }
 }
 const form = document.getElementById("folForm");
-const popup = document.getElementById('popupContainer');
+const popup = document.getElementById('popupFade');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -27,12 +27,12 @@ form.addEventListener('submit', (e) => {
             titlePopup[0].innerText = POPUP_CONST.SUCCESS.title;
             const descriptionPopup = document.getElementsByClassName('descriptionPopup')
             descriptionPopup[0].innerText = POPUP_CONST.SUCCESS.description;
-            popup.classList.remove("none")
+            popup.style.display='flex';
         } else {
             titlePopup[0].innerText = POPUP_CONST.FAILURE.title;
             const descriptionPopup = document.getElementsByClassName('descriptionPopup')
             descriptionPopup[0].innerText = POPUP_CONST.FAILURE.description;
-            popup.classList.remove("none")
+            popup.style.display='flex';
         }
     }
 
@@ -41,5 +41,7 @@ form.addEventListener('submit', (e) => {
 
 const closePopupEl = document.getElementsByClassName('timeExit');
 for (let i = 0; i < closePopupEl.length; i++) {
-    closePopupEl[i].addEventListener('click', () => popup.classList.add("none"))
+    closePopupEl[i].addEventListener('click', () => {
+        popup.style.display='none';
+    })
 }
