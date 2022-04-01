@@ -8,7 +8,7 @@ const POPUP_CONST = {
         description: 'Sorry! Try again.'
     }
 }
-const form = document.getElementById("folForm");
+const form = document.getElementById("followForm");
 const popup = document.getElementById('popupFade');
 
 form.addEventListener('submit', (e) => {
@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
     request.open(form.method, 'https://jsonplaceholder.typicode.com/posts', true);
 
     const titlePopup = document.getElementsByClassName('titlePopup')
-    const descriptionPopup = document.getElementsByClassName('descriptionPopup')
+    const descriptionPopup = document.getElementsByClassName('descPopup')
     request.onload = function () {
         if (this.status >= 200 && this.status < 400) {
             titlePopup[0].innerText = POPUP_CONST.SUCCESS.title;
@@ -37,7 +37,7 @@ form.addEventListener('submit', (e) => {
     request.send(`email=${formData.email}`);
 })
 
-const closePopupEl = document.getElementsByClassName('timeExit');
+const closePopupEl = document.getElementsByClassName('closePopup');
 for (let i = 0; i < closePopupEl.length; i++) {
     closePopupEl[i].addEventListener('click', () => {
         popup.style.display='none';

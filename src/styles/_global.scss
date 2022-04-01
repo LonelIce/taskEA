@@ -49,12 +49,12 @@ body {
     justify-content: center;
     flex: 1 0 auto;
 
-    .containerMain {
+    .innerMain {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .titleSit {
+      .titleContentMain {
         text-transform: uppercase;
         opacity: 39%;
         color: #162C4E;
@@ -65,7 +65,7 @@ body {
         padding-bottom: 16px;
       }
 
-      .statement {
+      .descMain {
         line-height: 150%;
         max-width: 286px;
         font-weight: 400;
@@ -73,7 +73,7 @@ body {
         text-align: center;
       }
 
-      .timerItems {
+      .timer {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -101,7 +101,7 @@ body {
             line-height: 12px;
             color: #FFFFFF;
 
-            .dxText {
+            .desktopText {
               display: none;
             }
           }
@@ -112,7 +112,7 @@ body {
         }
       }
 
-      .textInvitationEventPage {
+      .descBtnInvitationEventPage {
         font-weight: 400;
         font-size: 16px;
         width: 100%;
@@ -144,12 +144,12 @@ body {
           background-color: #356aad;
         }
 
-        .descriptionButtonInvitationEventPage {
+        .textBtnInvitationEventPage {
           text-align: left;
           flex-grow: 1;
         }
 
-        .arrowRight {
+        .iconArrowRight {
           width: 20px;
           height: auto;
         }
@@ -171,7 +171,7 @@ body {
       flex-grow: 1;
       max-width: 280px;
 
-      .sendGroup {
+      .wrapperInputsGroup {
         display: flex;
         flex-direction: row;
         background-color: #FFFFFF;
@@ -190,7 +190,7 @@ body {
           flex-grow: 1;
         }
 
-        .submitButton {
+        .submitBtn {
           border-radius: 50%;
           background-color: #DF2224;
           border: 0;
@@ -232,14 +232,14 @@ body {
       background-color: #FFFFFF;
       z-index: 99999;
 
-      .exit {
+      .exitImg {
         position: absolute;
         top: 24px;
         right: 16px;
         cursor: pointer;
       }
 
-      .mainPopup {
+      .wrapperPopup {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -257,7 +257,7 @@ body {
           margin-top: 16px;
         }
 
-        .descriptionPopup {
+        .descPopup {
           font-weight: 400;
           font-size: 16px;
           line-height: 150%;
@@ -307,16 +307,16 @@ body {
     }
 
     main {
-      .containerMain {
-        .titleSit {
+      .innerMain {
+        .titleContentMain {
           padding-bottom: 16px;
         }
 
-        .textInvitationEventPage {
+        .descBtnInvitationEventPage {
           text-align: center;
         }
 
-        .timerItems {
+        .timer {
           max-width: 360px;
         }
 
@@ -352,17 +352,17 @@ body {
     }
 
     main {
-      .containerMain {
-        .titleSit {
+      .innerMain {
+        .titleContentMain {
           font-size: 72px;
         }
 
-        .statement {
+        .descMain {
           max-width: 424px;
           font-size: 18px;
         }
 
-        .timerItems {
+        .timer {
           max-width: 592px;
           margin-top: 32px;
           margin-bottom: 72px;
@@ -382,18 +382,18 @@ body {
               font-size: 16px;
               text-transform: none;
 
-              .mbText {
+              .mobileText {
                 display: none;
               }
 
-              .dxText {
+              .desktopText {
                 display: inline;
               }
             }
           }
         }
 
-        .textInvitationEventPage {
+        .descBtnInvitationEventPage {
           font-size: 18px;
           padding-bottom: 12px;
         }
@@ -406,7 +406,7 @@ body {
       form {
         max-width: 440px;
 
-        .sendGroup {
+        .wrapperInputsGroup {
           padding: 8px;
           margin-bottom: 8px;
 
@@ -415,7 +415,7 @@ body {
             line-height: 150%;
           }
 
-          .submitButton {
+          .submitBtn {
             width: 43px;
             height: 43px;
             background-size: 20px
