@@ -13,9 +13,6 @@ const popup = document.getElementById('popupFade');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = {
-        email: document.querySelector('input[type="email"]').value
-    }
 
     const request = new XMLHttpRequest();
     request.open(form.method, 'https://jsonplaceholder.typicode.com/posts', true);
@@ -25,18 +22,19 @@ form.addEventListener('submit', (e) => {
     request.onload = function () {
         if (this.status >= 200 && this.status < 400) {
             titlePopup[0].innerText = POPUP_CONST.SUCCESS.title;
-            const descriptionPopup = document.getElementsByClassName('descriptionPopup')
             descriptionPopup[0].innerText = POPUP_CONST.SUCCESS.description;
             popup.style.display='flex';
         } else {
             titlePopup[0].innerText = POPUP_CONST.FAILURE.title;
-            const descriptionPopup = document.getElementsByClassName('descriptionPopup')
             descriptionPopup[0].innerText = POPUP_CONST.FAILURE.description;
             popup.style.display='flex';
         }
     }
 
-    request.send();
+    const formData = {
+        email: document.querySelector('input[type="email"]').value
+    }
+    request.send(`email=${formData.email}`);
 })
 
 const closePopupEl = document.getElementsByClassName('timeExit');
