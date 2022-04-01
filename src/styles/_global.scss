@@ -18,22 +18,6 @@ body {
   align-items: center;
   flex-grow: 1;
 
-  .figureOnTheLeft {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .figureOnTheRight {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .desktopBig, .desktopSmall {
-    display: none;
-  }
-
   header {
     display: flex;
     justify-content: center;
@@ -42,6 +26,20 @@ body {
 
     .logo {
       height: 40px;
+    }
+
+    &:before {
+      content: url("../assets/figureOnTheLeftMobile.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      content: url("../assets/figureOnTheRightMobile.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -305,19 +303,20 @@ body {
 
 @media (min-device-width: 768px) {
   body {
-    .desktopBig, .mobile {
-      display: none;
-    }
-
-    .desktopSmall {
-      display: block;
-    }
 
     header {
       padding-top: 100px;
 
       .logo {
         height: 60px;
+      }
+
+      &:before {
+        content: url("../assets/figureOnTheLeftSmallDesktop.svg");
+      }
+
+      &:after {
+        content: url("../assets/figureOnTheRightSmallDesktop.svg");
       }
     }
 
@@ -353,16 +352,17 @@ body {
 
 @media (min-device-width: 1920px) {
   body {
-    .mobile, .desktopSmall {
-      display: none;
-    }
-
-    .desktopBig {
-      display: block;
-    }
 
     header {
       padding-top: 60px;
+
+      &:before {
+        content: url("../assets/figureOnTheLeftBigDesktop.svg");
+      }
+
+      &:after {
+        content: url("../assets/figureOnTheRightBigDesktop.svg");
+      }
     }
 
     main {
