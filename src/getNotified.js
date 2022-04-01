@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const request = new XMLHttpRequest();
-    request.open(form.method, 'https://jsonplaceholder.typicode.com/posts', true);
+    request.open(form.method, form.action, true);
 
     const titlePopup = document.getElementsByClassName('titlePopup')
     const descriptionPopup = document.getElementsByClassName('descPopup')
