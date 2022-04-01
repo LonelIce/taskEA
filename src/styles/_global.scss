@@ -123,18 +123,6 @@ body {
         padding-bottom: 15px;
       }
 
-      @keyframes hoverButton {
-        from {
-          left: 0;
-        }
-        50% {
-          left: 25px;
-        }
-        to {
-          left: 0;
-        }
-      }
-
       .buttonInvitationEventPage {
         text-decoration: none;
         display: flex;
@@ -154,9 +142,6 @@ body {
         margin-bottom: 24px;
 
         &:hover {
-          animation-name: hoverButton;
-          animation-duration: 4s;
-          animation-iteration-count: infinite;
           background-color: #356aad;
         }
 
