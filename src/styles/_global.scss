@@ -2,227 +2,177 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  overflow: hidden;
-
-  @keyframes appearanceFigureLeft {
-    from {
-      top: -100px;
-    }
-    to {
-      top: 0;
-    }
-  }
-
-  .figureOnTheLeft {
-    position: absolute;
-    animation-name: appearanceFigureLeft;
-    animation-duration: 2s;
-    width: 35%;
-  }
-
-  @keyframes appearanceFigureRight {
-    from {
-      top: -100px;
-    }
-    to {
-      top: 0;
-    }
-  }
-
-  .figureOnTheRight {
-    position: absolute;
-    animation-name: appearanceFigureRight;
-    animation-duration: 2s;
-    right: 0;
-    width: 35%;
-  }
-
-  @keyframes appearanceMain {
-    from {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 
   header {
     display: flex;
     justify-content: center;
     padding-top: 80px;
-    animation-name: appearanceMain;
-    animation-duration: 4s;
 
     .logo {
       height: 40px;
     }
+
+    &:before {
+      content: url("../assets/figureOnTheLeftMobile.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      content: url("../assets/figureOnTheRightMobile.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   main {
-
     padding: 0 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    animation-name: appearanceMain;
-    animation-duration: 4s;
+    justify-content: center;
+    flex: 1 0 auto;
 
-    .titleSit {
-      text-transform: uppercase;
-      opacity: 39%;
-      color: #162C4E;
-      font-size: 36px;
-      font-weight: 700;
-      text-align: center;
-      line-height: 104%;
-    }
-
-    .statement {
-      padding-top: 16px;
-      line-height: 150%;
-      max-width: 286px;
-      font-weight: 400;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .timerItems {
+    .innerMain {
       display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 360px;
-      padding: 40px 0;
+      flex-direction: column;
+      align-items: center;
 
-      .timerItem {
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 100%;
+      .titleContentMain {
+        text-transform: uppercase;
+        opacity: 39%;
         color: #162C4E;
+        font-size: 36px;
+        font-weight: 700;
         text-align: center;
+        line-height: 104%;
+        margin-bottom: 16px;
+      }
 
-        .timelineName {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-image: url("../assets/timerValueFigure.svg");
-          width: 64px;
-          height: 40px;
-          text-transform: uppercase;
-          font-weight: 400;
-          font-size: 12px;
-          line-height: 12px;
-          color: #FFFFFF;
-          margin-top: 6px;
+      .descMain {
+        line-height: 150%;
+        max-width: 286px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+      }
 
-          .dxText {
-            display: none;
+      .timer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 310px;
+        margin: 40px 0;
+
+        .timerItem {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 100%;
+          color: #162C4E;
+          text-align: center;
+
+          .timelineName {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("../assets/timerValueFigure.svg");
+            margin-top: 6px;
+            width: 64px;
+            height: 40px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 12px;
+            color: #FFFFFF;
+
+            .desktopText {
+              display: none;
+            }
           }
+        }
+
+        .separator {
+          flex-grow: 1;
         }
       }
 
-      .separator {
-        flex-grow: 1;
+      .descBtnInvitationEventPage {
+        font-weight: 400;
+        font-size: 16px;
+        width: 100%;
+        line-height: 150%;
+        max-width: 360px;
+        text-align: right;
+        margin-bottom: 15px;
+      }
+
+      .buttonInvitationEventPage {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        min-width: 240px;
+        padding: 16px 20px 16px 28px;
+        border: 0;
+        background-color: #1D4169;
+        border-radius: 40px;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 24px;
+
+        &:hover {
+          background-color: #356aad;
+        }
+
+        .textBtnInvitationEventPage {
+          text-align: left;
+          flex-grow: 1;
+        }
+
+        .iconArrowRight {
+          width: 20px;
+          height: auto;
+        }
       }
     }
 
-    .textInvitationEventPage {
-      font-weight: 400;
-      font-size: 16px;
-      padding-bottom: 15px;
-      width: 100%;
-      max-width: 360px;
-      text-align: right;
-    }
-
-    @keyframes hoverButton {
-      from {
-        left: 0;
-      }
-      50% {
-        left: 25px;
-      }
-      to {
-        left: 0;
-      }
-    }
-
-    .buttonInvitationEventPage {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      min-width: 240px;
-      padding: 16px 20px 16px 28px;
-      margin-bottom: 16px;
-      border: 0;
-      background-color: #1D4169;
-      border-radius: 40px;
-      color: #FFFFFF;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 27px;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-
-      &:hover {
-        animation-name: hoverButton;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        background-color: #356aad;
-      }
-
-      .descriptionButtonInvitationEventPage {
-        text-align: left;
-        flex-grow: 1;
-      }
-
-      .arrowRight {
-        width: 20px;
-        height: auto;
-      }
-    }
-  }
-
-  @keyframes appearanceFooter {
-    from {
-      bottom: -400px;
-    }
-    66% {
-      bottom: -400px;
-    }
-    to {
-      bottom: 0;
-    }
   }
 
   footer {
-    position: relative;
     background-color: #162C4E;
-    flex-basis: 17%;
     width: 100%;
+    flex: 0 0 141px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
-    animation-name: appearanceFooter;
-    animation-duration: 6s;
+    padding: 16px 20px;
 
     form {
       flex-grow: 1;
       max-width: 280px;
 
-      .sendGroup {
+      .wrapperInputsGroup {
         display: flex;
         flex-direction: row;
         background-color: #FFFFFF;
@@ -230,7 +180,7 @@ body {
         padding: 4px;
 
         .email {
-          font-family: Roboto, sans-serif;
+          font-family: 'Roboto', sans-serif;
           padding-left: 16px;
           margin-right: 16px;
           border-radius: 40px;
@@ -241,7 +191,7 @@ body {
           flex-grow: 1;
         }
 
-        .submitButton {
+        .submitBtn {
           border-radius: 50%;
           background-color: #DF2224;
           border: 0;
@@ -256,77 +206,91 @@ body {
     }
   }
 
-  .popupContainer {
+  #popupFade {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
     align-items: center;
-    background-color: rgba(22, 44, 78, 0.6);
-    display: flex;
+    justify-content: center;
+    display: none;
+
+    &:before {
+      content: '';
+      background-color: #162C4E;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      opacity: 0.6;
+    }
 
     .popup {
+      position: absolute;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: 320px;
-      height: 370px;
+      padding: 24px 16px;
+      min-height: 370px;
+      width: 320px;
       background-color: #FFFFFF;
+      z-index: 99999;
 
-      .exit {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-        padding: 16px;
-      }
-
-      .titlePopup {
-        font-weight: 700;
-        font-size: 36px;
-        text-align: center;
-        color: #162C4E;
-        line-height: 104%;
-        padding: 30px 16px;
-      }
-
-      .descriptionPopup {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        color: rgba(0, 0, 0, 0.8);
-        text-align: center;
-        padding: 15px 16px;
-      }
-
-      .closeButton {
-        background-color: #1D4169;
-        border-radius: 40px;
-        padding: 16px;
-        width: 168px;
-        text-align: center;
-        color: #FFFFFF;
-        display: flex;
-        justify-content: center;
-        margin: 15px 0;
+      .exitImg {
+        position: absolute;
+        top: 24px;
+        right: 16px;
         cursor: pointer;
+      }
 
-        &:hover {
-          background-color: #356aad;
+      .wrapperPopup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+
+        .titlePopup {
+          font-weight: 700;
+          font-size: 36px;
+          text-align: center;
+          color: #162C4E;
+          text-transform: uppercase;
+          line-height: 104%;
+          word-break: break-all;
+          margin-top: 16px;
+        }
+
+        .descPopup {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.8);
+          text-align: center;
+          margin: 24px 0;
+        }
+
+        .closeButton {
+          background-color: #1D4169;
+          border-radius: 40px;
+          border:0;
+          padding: 16px;
+          width: 200px;
+          text-align: center;
+          color: #FFFFFF;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 18px;
+
+          &:hover {
+            background-color: #356aad;
+          }
         }
       }
     }
-  }
-
-  .none {
-    display: none;
   }
 }
 
 @media (min-device-width: 768px) {
   body {
-    .figureOnTheLeft, .figureOnTheRight {
-      width: 33%;
-    }
 
     header {
       padding-top: 100px;
@@ -334,20 +298,34 @@ body {
       .logo {
         height: 60px;
       }
+
+      &:before {
+        content: url("../assets/figureOnTheLeftSmallDesktop.svg");
+      }
+
+      &:after {
+        content: url("../assets/figureOnTheRightSmallDesktop.svg");
+      }
     }
 
     main {
-      .statement {
-        padding-top: 20px;
-      }
+      .innerMain {
+        .descBtnInvitationEventPage {
+          text-align: center;
+        }
 
-      .textInvitationEventPage {
-        text-align: center;
+        .timer {
+          max-width: 360px;
+        }
+
+        .buttonInvitationEventPage {
+          margin: 0;
+        }
       }
     }
 
     footer {
-      flex-basis: 15%;
+      flex-basis: 160px;
 
       form {
         max-width: 360px;
@@ -356,67 +334,92 @@ body {
   }
 }
 
-@media (min-device-width: 1366px) {
+@media (min-device-width: 1920px) {
   body {
-    .figureOnTheLeft {
-      width: 20%;
-    }
-
-    .figureOnTheRight {
-      width: 10%;
-    }
 
     header {
       padding-top: 60px;
-      padding-bottom: 20px;
+
+      &:before {
+        content: url("../assets/figureOnTheLeftBigDesktop.svg");
+      }
+
+      &:after {
+        content: url("../assets/figureOnTheRightBigDesktop.svg");
+      }
     }
 
     main {
-      .titleSit {
-        font-size: 75px;
-        line-height: 37.44px;
-      }
-
-      .statement {
-        padding-top: 16px;
-        max-width: 24%;
-        font-size: 18px;
-      }
-
-      .timerItems {
-        max-width: 30%;
-        padding-top: 32px;
-        padding-bottom: 72px;
-
-        .timerItem {
+      .innerMain {
+        .titleContentMain {
           font-size: 72px;
+        }
 
-          .timelineName {
-            background-image: url("../assets/timerValueFigureDxt.svg");
-            height: 54px;
-            width: 132px;
-            font-size: 16px;
-            text-transform: none;
+        .descMain {
+          max-width: 424px;
+          font-size: 18px;
+        }
 
-            .mbText {
-              display: none;
+        .timer {
+          max-width: 592px;
+          margin-top: 32px;
+          margin-bottom: 72px;
+          height: 128px;
+
+          .timerItem {
+            font-size: 72px;
+
+            .timerCount {
+              max-height: 72px;
             }
 
-            .dxText {
-              display: inline;
+            .timelineName {
+              background-image: url("../assets/timerValueFigureDxt.svg");
+              height: 54px;
+              width: 132px;
+              font-size: 16px;
+              text-transform: none;
+
+              .mobileText {
+                display: none;
+              }
+
+              .desktopText {
+                display: inline;
+              }
             }
           }
         }
-      }
 
-      .textInvitationEventPage {
-        font-size: 18px;
-        padding-bottom: 12px;
+        .descBtnInvitationEventPage {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
       }
     }
 
     footer {
-      flex-basis: 20%;
+      flex-basis: 192px;
+
+      form {
+        max-width: 440px;
+
+        .wrapperInputsGroup {
+          padding: 8px;
+          margin-bottom: 8px;
+
+          .email {
+            font-size: 18px;
+            line-height: 150%;
+          }
+
+          .submitBtn {
+            width: 43px;
+            height: 43px;
+            background-size: 20px
+          }
+        }
+      }
     }
   }
 }
