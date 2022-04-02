@@ -12,8 +12,3 @@
 * SASS/CSS,  
 * JS,  
 * Webpack 5  
-### Pixel Perfect:
-![Mobile](imgForReadme/mobilePP.png "Mobile")  
-![Small desktop](imgForReadme/smallDeskPP.png "Small desktop")  
-![Desktop](imgForReadme/deskPP.png "Desktop")  
-![Popup](imgForReadme/popup.png "Popup")  
