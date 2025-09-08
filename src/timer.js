@@ -10,7 +10,7 @@ const HOURS_IN_DAY = 24;
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const deadline = new Date(2022, 12, 22);
+    const deadline = new Date(2026, 12, 22);
 
     let timerId = null;
 
